@@ -148,7 +148,6 @@
       .btn.primary { background: var(--accent); border-color: var(--accent); color: #1a1205; }
       .btn.primary:hover { background: #e2bd6a; border-color: #e2bd6a; }
       .btn svg { width: 16px; height: 16px; }
-      .btn-email { text-transform: none; letter-spacing: 0.02em; font-size: 14px; }
       .scroll-cue {
         position: absolute; right: var(--gutter); bottom: 40px; z-index: 1;
         writing-mode: vertical-rl; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
@@ -244,7 +243,8 @@
         border: 1px solid var(--line); transition: border-color 0.3s, background 0.3s;
       }
       .accolade:hover { border-color: rgba(212,169,78,0.5); background: rgba(255,255,255,0.02); }
-      .accolade q { font-family: var(--serif); font-style: italic; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.25; display: block; }
+      .accolade strong { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 2.8vw, 34px); line-height: 1.2; display: block; }
+      .accolade span svg { width: 12px; height: 12px; vertical-align: -1px; margin-left: 6px; }
       .accolade span { display: block; margin-top: 18px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
 
       /* Contact / footer */
@@ -256,13 +256,18 @@
         transition: color 0.25s;
       }
       .contact .mail:hover { color: var(--accent); }
-      .socials { display: flex; justify-content: center; gap: 12px; margin-top: 44px; }
-      .socials a {
-        width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center;
-        border: 1px solid var(--line); color: var(--muted); transition: all 0.25s;
+      .profiles { margin-top: 48px; }
+      .profiles + .profiles { margin-top: 28px; }
+      .profiles-label { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+      .profile-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .profile-links a {
+        display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px;
+        border: 1px solid var(--line); text-decoration: none; font-size: 13px; letter-spacing: 0.1em;
+        text-transform: uppercase; font-weight: 500; color: var(--text); transition: all 0.25s;
       }
-      .socials a:hover { color: var(--text); border-color: var(--text); }
-      .socials svg { width: 18px; height: 18px; }
+      .profile-links a:hover { border-color: var(--accent); color: var(--accent); }
+      .profile-links svg { width: 16px; height: 16px; }
+      .profile-links a svg:last-child:not(:first-child) { width: 12px; height: 12px; color: var(--muted); }
       footer.site {
         border-top: 1px solid var(--line); padding: 28px 0; font-size: 13px; color: var(--muted);
       }
@@ -330,6 +335,7 @@
       <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm0 .5 9 6 9-6"/></symbol>
       <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></g></symbol>
       <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.53l.38-2.94H13.5V8.69c0-.85.24-1.43 1.46-1.43h1.56V4.63A20.9 20.9 0 0 0 14.25 4.5c-2.25 0-3.79 1.37-3.79 3.9v2.16H7.92v2.94h2.54V21h3.04Z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.3 2.2 1.9 3.9 4.1 4.1v3.1c-1.5 0-2.9-.4-4.1-1.2v6.1a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.9 2.6V3h3.1Z"/></symbol>
     </svg>
 
     <!-- Navigation -->
@@ -358,14 +364,14 @@
           <h1><span>David</span><span>Mukka</span></h1>
           <p class="lede">Acclaimed actor, musician, composer, and screenwriter.</p>
           <div class="actions">
-            <a href="mailto:contact@davidmukka.com" class="btn primary btn-email">
-              <svg><use href="#i-mail" /></svg> contact@davidmukka.com
+            <a href="https://imdb.me/davidmukka" class="btn primary" target="_blank" rel="noopener">
+              IMDb <svg><use href="#i-arrow" /></svg>
             </a>
-            <a href="https://www.instagram.com/davidmukka_/" class="btn" target="_blank" rel="noopener">
+            <a href="https://resumes.actorsaccess.com/davidmukka" class="btn" target="_blank" rel="noopener">
+              Actors Access <svg><use href="#i-arrow" /></svg>
+            </a>
+            <a href="https://www.instagram.com/davidmukka/" class="btn" target="_blank" rel="noopener">
               <svg><use href="#i-instagram" /></svg> Instagram
-            </a>
-            <a href="https://www.facebook.com/david.junior.dmc" class="btn" target="_blank" rel="noopener">
-              <svg><use href="#i-facebook" /></svg> Facebook
             </a>
           </div>
         </div>
@@ -517,13 +523,13 @@
           <p class="label reveal"><span class="num">05</span> Media Acclaim</p>
           <h2 class="reveal">In the Press</h2>
           <div class="accolades">
-            <a class="accolade reveal" href="https://balkanskivesti.info/david-mukka-wraps-filming-for-ingrid-and-i/" target="_blank" rel="noopener">
-              <q>The Internationally Acclaimed Next Big Character Actor</q>
-              <span>Balkan News</span>
+            <a class="accolade reveal" href="https://shoutoutla.com/meet-david-mukka-actor/" target="_blank" rel="noopener">
+              <strong>Meet David Mukka, Actor</strong>
+              <span>Shoutout LA <svg><use href="#i-arrow" /></svg></span>
             </a>
-            <a class="accolade reveal" data-delay="1" href="https://euhouse.mk/mk/newsletter/europe-house-buzz/" target="_blank" rel="noopener">
-              <q>The Actor of the New Generation</q>
-              <span>Europe House BUZZ</span>
+            <a class="accolade reveal" data-delay="1" href="https://online.flipbuilder.com/yisv/mqec/files/basic-html/page56.html" target="_blank" rel="noopener">
+              <strong>Featured in Volume 83</strong>
+              <span>Poze Magazine <svg><use href="#i-arrow" /></svg></span>
             </a>
           </div>
         </div>
@@ -535,10 +541,21 @@
           <p class="label reveal" style="justify-content: center">Representation &amp; Enquiries</p>
           <h2 class="reveal">Let’s Work Together</h2>
           <a class="mail reveal" href="mailto:contact@davidmukka.com">contact@davidmukka.com</a>
-          <div class="socials reveal">
-            <a href="https://www.instagram.com/davidmukka_/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram" /></svg></a>
-            <a href="https://www.facebook.com/david.junior.dmc" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook" /></svg></a>
-            <a href="mailto:contact@davidmukka.com" aria-label="Email"><svg><use href="#i-mail" /></svg></a>
+          <div class="profiles reveal">
+            <p class="profiles-label">Casting Profiles</p>
+            <div class="profile-links">
+              <a href="https://imdb.me/davidmukka" target="_blank" rel="noopener">IMDb <svg><use href="#i-arrow" /></svg></a>
+              <a href="https://resumes.actorsaccess.com/davidmukka" target="_blank" rel="noopener">Actors Access <svg><use href="#i-arrow" /></svg></a>
+              <a href="https://app.castingnetworks.com/talent/public-profile/35e4d080-32e7-11f1-a2e1-2bcb1a2d6aba" target="_blank" rel="noopener">Casting Networks <svg><use href="#i-arrow" /></svg></a>
+            </div>
+          </div>
+          <div class="profiles reveal">
+            <p class="profiles-label">Follow</p>
+            <div class="profile-links">
+              <a href="https://www.instagram.com/davidmukka/" target="_blank" rel="noopener"><svg><use href="#i-instagram" /></svg> Instagram</a>
+              <a href="https://www.facebook.com/davidmukkaofficial" target="_blank" rel="noopener"><svg><use href="#i-facebook" /></svg> Facebook</a>
+              <a href="https://www.tiktok.com/@davidmukka" target="_blank" rel="noopener"><svg><use href="#i-tiktok" /></svg> TikTok</a>
+            </div>
           </div>
         </div>
       </section>
