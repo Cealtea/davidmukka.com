@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "davidmukka-com",
+  "compatibility_date": "2025-09-01",
+  // Static-only Worker: everything in ./public is served from Cloudflare's edge.
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application",
+    "html_handling": "auto-trailing-slash"
+  },
+  "observability": { "enabled": true },
+  // Required by `wrangler preview`, which Workers Builds runs on PR branches.
+  "previews": {}
+}
