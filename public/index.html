@@ -36,8 +36,8 @@
         --line: rgba(255, 244, 230, 0.1);
         --text: #f3ece3;
         --muted: #a69c90;
-        --accent: #d4a94e;
-        --accent-soft: rgba(212, 169, 78, 0.14);
+        --accent: #7a3db3;
+        --accent-soft: rgba(229, 72, 77, 0.14);
         --display: "Montserrat", system-ui, sans-serif;
         --serif: "Cormorant Garamond", Georgia, serif;
         --sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -145,8 +145,8 @@
         border: 1px solid rgba(255,255,255,0.28); transition: all 0.25s ease;
       }
       .btn:hover { border-color: var(--text); background: rgba(255,255,255,0.06); }
-      .btn.primary { background: var(--accent); border-color: var(--accent); color: #1a1205; }
-      .btn.primary:hover { background: #e2bd6a; border-color: #e2bd6a; }
+      .btn.primary { background: var(--accent); border-color: var(--accent); color: #1a0606; }
+      .btn.primary:hover { background: #ef6b6f; border-color: #ef6b6f; }
       .btn svg { width: 16px; height: 16px; }
       .scroll-cue {
         position: absolute; right: var(--gutter); bottom: 40px; z-index: 1;
@@ -218,13 +218,13 @@
         content: ""; position: absolute; inset: auto -40% -60% auto; width: 220px; height: 220px; border-radius: 50%;
         background: radial-gradient(var(--accent-soft), transparent 70%); opacity: 0; transition: opacity 0.35s;
       }
-      .track:hover { transform: translateY(-6px); border-color: rgba(212,169,78,0.5); }
+      .track:hover { transform: translateY(-6px); border-color: rgba(229, 72, 77,0.5); }
       .track:hover::before { opacity: 1; }
       .track .play {
         width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
         border: 1px solid rgba(255,255,255,0.22); transition: all 0.3s;
       }
-      .track:hover .play { background: var(--accent); border-color: var(--accent); color: #1a1205; }
+      .track:hover .play { background: var(--accent); border-color: var(--accent); color: #1a0606; }
       .track .play svg { width: 16px; height: 16px; margin-left: 2px; }
       .track h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; line-height: 1.15; margin: 28px 0 8px; }
       .track small { color: var(--muted); font-size: 13px; line-height: 1.5; display: block; }
@@ -242,7 +242,7 @@
         display: block; padding: 34px; border-radius: 6px; text-decoration: none;
         border: 1px solid var(--line); transition: border-color 0.3s, background 0.3s;
       }
-      .accolade:hover { border-color: rgba(212,169,78,0.5); background: rgba(255,255,255,0.02); }
+      .accolade:hover { border-color: rgba(229, 72, 77,0.5); background: rgba(255,255,255,0.02); }
       .accolade strong { font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 2.8vw, 34px); line-height: 1.2; display: block; }
       .accolade span svg { width: 12px; height: 12px; vertical-align: -1px; margin-left: 6px; }
       .accolade span { display: block; margin-top: 18px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
