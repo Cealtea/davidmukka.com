@@ -23,12 +23,3 @@ Every push to `main` is built and deployed by Cloudflare Workers Builds
 (the repo is connected in the Cloudflare dashboard under the `davidmukka-com`
 Worker → Settings → Build).
 
-Manual deploy from your machine:
-
-```bash
-npx wrangler login # first time only
-npm run deploy
-```
-
-To serve on davidmukka.com, uncomment the `routes` block in `wrangler.jsonc`
-(the domain must be a zone on the same Cloudflare account) and deploy again.

@@ -8,10 +8,5 @@
     "not_found_handling": "single-page-application",
     "html_handling": "auto-trailing-slash"
   },
-  // Uncomment once the davidmukka.com zone is on your Cloudflare account.
-  // "routes": [
-  //   { "pattern": "davidmukka.com", "custom_domain": true },
-  //   { "pattern": "www.davidmukka.com", "custom_domain": true }
-  // ],
   "observability": { "enabled": true }
 }
